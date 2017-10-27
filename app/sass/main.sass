@@ -1,0 +1,219 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 360px
+	position: relative
+	line-height: 1.65
+	font-family: "Arial", sans-serif
+	overflow-x: hidden
+	opacity: 1
+	color: #333333
+	background: #000
+a
+	color: #005da1
+	text-decoration: underline
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.wrapper
+	max-width: 720px
+	margin: auto
+	min-width: 360px
+	background: #fff
+	.container	
+		padding: 15px 19px 0
+		width: 100%
+	.content
+		position: relative
+		padding-left: 130px
+		.content__head
+			.content__head__avatar
+				position: absolute
+				left: 0
+			.content__head__name
+				font-size: 16px
+				font-weight: bold
+			.content__head__spec
+				font-size: 12px
+				color: #808080
+			.content__head__desc
+				font-size: 14px
+				background: #fffbc8
+				border: 1px solid #cecabf
+				border-radius: 5px
+				padding: 10px 17px 10px 100px
+				margin-left: -100px
+				margin-top: 8px
+		.content__title-table
+			text-align: right
+			font-size: 11px
+			margin-right: 35px
+			margin-top: 15px
+			padding-bottom: 5px
+			+ hr
+				margin-top: 0
+		.content__sum
+			clear: both
+			overflow: hidden
+			font-size: 16px
+			font-weight: bold
+			div:first-child
+				float: left
+			div:last-child
+				float: right
+				padding-right: 35px
+		.content__table
+			display: table
+			width: 100%
+			font-size: 13px
+			border-collapse: collapse
+			.content__table__row
+				display: table-row
+				.content__table__row__cell
+					display: table-cell
+					padding-bottom: 2px
+					&:last-child
+						font-weight: bold
+						text-align: right
+						padding-right: 35px
+					span
+						display: block
+				span
+					background: #ace2f8
+					padding: 5px
+					white-space: nowrap
+					border-top-right-radius: 5px
+					border-bottom-right-radius: 5px
+					transition: .5s all ease
+				&:nth-child(2)
+					span
+						background: #b1e19b
+	
+
+	.reviews
+		margin-top: 20px
+		.reviews__head
+			overflow: hidden
+			.reviews__head__left
+				float: left
+				.reviews__head__left__last-name
+					font-size: 16px
+					font-weight: bold
+				a
+					font-size: 14px
+					margin-left: 10px
+			.reviews__head__right
+				float: right
+				a
+					font-size: 12px
+					margin-left: 10px
+					line-height: 100%
+					color: inherit
+					text-decoration: none !important
+					&:first-child
+						span
+							width: 12px
+							height: 11px
+							background: url(../img/like.png)
+							display: inline-block
+							vertical-align: top
+							margin-top: 8px
+					&:last-child
+						span
+							width: 13px
+							height: 14px
+							background: url(../img/comment.png)
+							display: inline-block
+							vertical-align: top
+							margin-top: 9px
+		.reviews__bl
+			clear: both
+			margin-top: 15px
+			.reviews__bl__name
+				font-size: 14px
+				font-weight: bold
+			.reviews__bl__date
+				font-size: 11px
+				margin-left: 5px
+				color: #808080
+			.reviews__bl__text
+				background: #f2fbff
+				border: 1px solid #cfcfcf
+				padding: 14px 18px
+				position: relative
+				margin-top: 10px
+				box-shadow: 0 0 10px 0 rgba(0,0,0,.1)
+				&:before
+					content: url(../img/ar.png)
+					position: absolute
+					top: -15px
+	form
+		background: #f2f2f2
+		padding: 30px 19px
+		margin-top: 20px
+		textarea
+			background: #fff
+			border: 1px solid #a9a9a9
+			width: 100%
+			padding: 20px
+			height: 100px
+		input[type="submit"]
+			background: #fdd639
+			border: none
+			font-weight: bold
+			text-align: center
+			padding: 10px 20px
+			border-radius: 20px
+			width: 280px
+			margin: 22px auto 0
+			display: block
+			&:hover
+				background: #3955fd
+				color: #fff
+		.error
+			display: none
+			color: red
+
+
+@import "media" // Всегда в конце
